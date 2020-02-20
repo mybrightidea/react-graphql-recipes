@@ -1,0 +1,40 @@
+{
+  "name": "react-recipes",
+  "version": "1.0.0",
+  "description": "An example architecture using Apollo Boost/React talking to a Mongo-implemented GraphQL API",
+  "main": "server.js",
+  "engines": {
+    "node": "v8.11.3",
+    "npm": "6.13.7"
+  },
+  "scripts": {
+    "server": "nodemon server.js",
+    "client": "cd client && npm start",
+    "dev": "concurrently --names \"server,client\" \"npm run server --silent\" \"npm run client --silent\"",
+    "start": "node server.js",
+    "heroku-postbuild": "npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-express": "^1.4.0",
+    "bcrypt": "^3.0.8",
+    "body-parser": "^1.19.0",
+    "concurrently": "^3.6.1",
+    "core-js": "^3.6.4",
+    "cors": "^2.8.5",
+    "csvtojson": "^2.0.10",
+    "dateformat": "^3.0.3",
+    "dotenv": "^5.0.1",
+    "express": "^4.17.1",
+    "graphql": "^14.6.0",
+    "graphql-tools": "^4.0.6",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.8.11",
+    "react": "^16.12.0",
+    "react-router-dom": "^5.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
+}
